@@ -2,9 +2,13 @@ import React from 'react';
 import {StyleSheet} from 'react-native';
 import {View, Text, Button, TouchableOpacity} from 'react-native';
 
-const User = ({item}) => {
+const User = (props) => {
+
+    let {item, nav: {navigate}} = props;
+
     return <View style={[styles.userBox, styles.margins, styles.sizes]}>
             <Text>{item.id}. {item.name}</Text>
+            <Button title={'user details'} onPress={() => {navigate('Details', {data: item})}}/>
            </View>;
 };
 export default User;

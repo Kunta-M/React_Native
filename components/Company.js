@@ -2,11 +2,11 @@ import React from "react";
 import {StyleSheet} from 'react-native';
 import {View, Text, Button, TouchableOpacity} from 'react-native';
 
-const UserDetails = () => {
+const Company = () => {
     return <View>
-            <Text>Users page</Text>
+            <Text>Company</Text>
            </View>;
 };
-export default UserDetails;
+export default Company;
 
 let styles = StyleSheet.create({});
