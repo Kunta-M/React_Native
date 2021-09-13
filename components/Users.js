@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState} from 'react';
 import {FlatList, StyleSheet} from 'react-native';
-import {View} from 'react-native';
+import {View, Text, Button, TouchableOpacity} from 'react-native';
 import {getUsers} from "../services/api.service";
 import User from "./User";
 
@@ -12,20 +12,16 @@ const Users = () => {
         getUsers().then(value => setUsers([...value]))
     }, []);
 
-    return <View style={[style.base]}>
+    return (
+        <View>
             <FlatList
                 data={users}
                 renderItem={({item}) => <User item={item}/>}
                 keyExtractor={item => '' + item.id}
             />
-           </View>;
+        </View>
+    );
 };
-
 export default Users;
 
-let styles = StyleSheet.create({
-    base: {
-        flex: 1,
-        height: '100%'
-    }
-});
+let styles = StyleSheet.create({});

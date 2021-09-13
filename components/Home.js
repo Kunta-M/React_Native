@@ -2,11 +2,11 @@ import React from "react";
 import {StyleSheet} from 'react-native';
 import {View, Text, Button, TouchableOpacity} from 'react-native';
 
-const UserDetails = () => {
+const Home = () => {
     return <View>
-            <Text>Users page</Text>
+            <Text>Home page</Text>
            </View>;
 };
-export default UserDetails;
+export default Home;
 
 let styles = StyleSheet.create({});

@@ -1,11 +1,11 @@
-import React from "react";
+import React from 'react';
 import {StyleSheet} from 'react-native';
-import {View, Text} from 'react-native';
+import {View, Text, Button, TouchableOpacity} from 'react-native';
 
 const User = ({item}) => {
-    return <View style={[styles.userBox]}>
-        <Text style={[styles.userBox]}>{item.name}</Text>
-     </View>;
+    return <View style={[styles.userBox, styles.margins, styles.sizes]}>
+            <Text>{item.id}. {item.name}</Text>
+           </View>;
 };
 export default User;
 
@@ -15,8 +15,12 @@ let styles = StyleSheet.create({
         backgroundColor: 'silver',
         justifyContent: 'center',
         textAlign: 'center',
-        marginBottom: 3,
+    },
+    margins: {
+        margin: 5,
+    },
+    sizes: {
         width: '70%',
-        height: 400
+        height: 70,
     },
 });
